@@ -4,58 +4,269 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Monica Shanmugam</title>
-  <meta name="description" content="Personal website of Monica Shanmugam">
+  <meta name="description" content="Monica Shanmugam, PhD candidate in Aerospace Engineering at Virginia Tech. Experimental fluid dynamics, CFD, and digital twins for propulsion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <header class="intro">
-      <div class="intro-text">
-        <h1>Monica Shanmugam</h1>
-        <p class="contact">
-          <a href="mailto:you@example.com">you@example.com</a>
-          · <a href="https://www.linkedin.com/in/your-profile/">LinkedIn</a>
-          · <a href="https://github.com/monicashanmugam">GitHub</a>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-name" href="#top">Monica Shanmugam</a>
+      <div class="topnav-links">
+        <a href="#about" class="active">About</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#papers">Papers</a>
+        <a href="#experience">Experience</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top" class="page">
+    <header id="about" class="masthead">
+      <p class="eyebrow">Aerospace Engineering · Virginia Tech</p>
+      <h1>Monica Shanmugam</h1>
+      <div class="rule"></div>
+      <p class="role">PhD candidate working on experimental fluid dynamics, CFD, and digital twins for propulsion.</p>
+      <div class="bio">
+        <p>
+          I'm a PhD candidate in Aerospace Engineering at Virginia Tech. I combine
+          physics-based simulation with wind-tunnel and engine experiments to build models that
+          can be checked against real hardware.
         </p>
         <p>
-          Hi! I'm Monica. Write a few sentences here about what you do, what you're
-          working on, and what you're interested in.
-        </p>
-        <p>
-          Add your background, education, or what kind of opportunities you're
-          looking for. Feel free to get in touch!
+          I'm a graduate research assistant in the Stability Wind Tunnel and the Advanced
+          Propulsion and Power Laboratory. On an NSF digital-twin project I lead the forward
+          model for aero-engine health under particle damage, coupling high-fidelity CFD with a
+          one-dimensional thermodynamic cycle. My master's thesis was the NASA BeVERLI Hill
+          campaign: laser measurements of a three-dimensional turbulent boundary layer, used as a
+          blind benchmark for turbulence models.
         </p>
       </div>
-      <img class="avatar" src="images/profile.svg" alt="Monica Shanmugam">
+      <div class="contact">
+        <a href="mailto:monicashanmugam@vt.edu">monicashanmugam@vt.edu</a>
+        <a href="https://www.linkedin.com/in/monica-shanmugam" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/monicashanmugam" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </header>
 
-    <section>
+    <section id="news">
       <h2>News</h2>
-      <ul class="news">
-        <li><span class="date">Oct '26</span> Launched this website.</li>
-        <li><span class="date">Mon 'YY</span> Add a milestone, role, award, or publication.</li>
+      <ul class="ledger">
+        <li><span class="date">Mar 2025</span><span>Named one of Aviation Week's 20 Twenties.</span></li>
+        <li><span class="date">2026</span><span>"Building a Digital Twin Framework for Propulsion Engines with Particle Damage," AIAA AVIATION Forum.</span></li>
+        <li><span class="date">2026</span><span>"Three-Dimensional Effects of the Flow Over the BeVERLI Hill," AIAA SciTech Forum.</span></li>
+        <li><span class="date">2024</span><span>Experimental results for the VT–NASA CFD turbulence-model blind validation challenge, AIAA AVIATION / ASCEND.</span></li>
+        <li><span class="date">2024</span><span>Master's thesis, "Turbulent Boundary Layer Flow Over a Bump," Virginia Tech.</span></li>
+        <li><span class="date">2023</span><span>"Mission Planning and Analysis of Heliopause and the World Beyond Solar System," AIAA SciTech.</span></li>
+        <li><span class="date">2021</span><span>"Vane Induced Two-Phase Flow Mixing," IOP Conference Series.</span></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Projects</h2>
+    <section id="research">
+      <h2>Research</h2>
+      <div class="filters" role="group" aria-label="Filter research">
+        <button type="button" class="chip active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="wind-tunnel" aria-pressed="false">Wind tunnel</button>
+        <button type="button" class="chip" data-filter="digital-twins" aria-pressed="false">Digital twins</button>
+        <button type="button" class="chip" data-filter="modeling" aria-pressed="false">Modeling</button>
+      </div>
 
-      <article class="project">
-        <h3>Project One</h3>
-        <p class="tech">Python, React, SQL</p>
-        <p>Describe what you built, the problem it solved, and the result.</p>
-        <a href="https://github.com/monicashanmugam">Code</a>
-      </article>
+      <div class="research-list">
+        <article class="research" data-tags="wind-tunnel digital-twins">
+          <div class="research-head">
+            <h3>MATH digital twin (NSF)</h3>
+            <span class="date">Sep 2024–present</span>
+          </div>
+          <p class="tags">Wind tunnel / Digital twins</p>
+          <p>Closed-loop health monitoring of an aero-engine under particle damage. I lead the forward model: CFD coupled to a cycle deck, plus micro gas-turbine tests used to calibrate and check it.</p>
+        </article>
 
-      <article class="project">
-        <h3>Project Two</h3>
-        <p class="tech">Tools and technologies used</p>
-        <p>Describe what you built, the problem it solved, and the result.</p>
-        <a href="https://github.com/monicashanmugam">Code</a>
-      </article>
+        <article class="research" data-tags="wind-tunnel">
+          <div class="research-head">
+            <h3>NASA BeVERLI Hill</h3>
+            <span class="date">Oct 2022–Dec 2024</span>
+          </div>
+          <p class="tags">Wind tunnel</p>
+          <p>Laser Doppler measurements on a benchmark hill, RANS comparisons with SST and Spalart–Allmaras, and a blind study with multiple CFD teams.</p>
+        </article>
+
+        <article class="research" data-tags="modeling">
+          <div class="research-head">
+            <h3>3D U-Net surrogate</h3>
+            <span class="date">ongoing</span>
+          </div>
+          <p class="tags">Modeling</p>
+          <p>A volumetric network that predicts temperature, pressure, and velocity from high-fidelity CFD, so new geometries do not each need a full simulation.</p>
+        </article>
+
+        <article class="research" data-tags="modeling">
+          <div class="research-head">
+            <h3>Asset lifecycle agents (NVIDIA DLI)</h3>
+          </div>
+          <p class="tags">Modeling</p>
+          <p>A multi-agent workflow over sensor time series for forecasting, anomaly detection, and remaining useful life.</p>
+        </article>
+
+        <article class="research" data-tags="modeling">
+          <div class="research-head">
+            <h3>Gas-turbine structures, GTRE</h3>
+            <span class="date">2021</span>
+          </div>
+          <p class="tags">Modeling</p>
+          <p>Transient thermomechanical analysis of casing and nozzle hardware, including Inconel 718.</p>
+        </article>
+
+        <article class="research" data-tags="modeling">
+          <div class="research-head">
+            <h3>Earlier flow studies</h3>
+          </div>
+          <p class="tags">Modeling</p>
+          <p>Swirl-injector air-core CFD, vane-induced two-phase mixing in a microchannel, and a student propulsion study for an Earth-to-Venus transfer.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Education &amp; Experience</h2>
+      <div class="panels">
+        <div class="panel">
+          <p class="eyebrow">Experience</p>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Graduate Research Assistant, Virginia Tech</h3>
+              <span class="date">Aug 2022–present</span>
+            </div>
+            <p>Stability Wind Tunnel and Advanced Propulsion and Power Laboratory.</p>
+          </div>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Operations Manager Intern, Amazon</h3>
+              <span class="date">Feb 2022–Jul 2022</span>
+            </div>
+            <p>Process work on AMXL operations; about 15% better dimensional-measurement consistency and about 20% less rework and cycle time.</p>
+          </div>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Project Trainee, Gas Turbine Research Establishment</h3>
+              <span class="date">Sep 2021–Nov 2021</span>
+            </div>
+            <p>Structural and transient analysis of hot-section casing and nozzle parts.</p>
+          </div>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Graduate Teaching Assistant, Virginia Tech</h3>
+            </div>
+            <p>Aerodynamics, experimental methods, electronics lab, and general chemistry lab.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <p class="eyebrow">Education</p>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>PhD, Aerospace Engineering</h3>
+              <span class="date">Aug 2022–present</span>
+            </div>
+            <p>Virginia Tech, Blacksburg.</p>
+            <p class="date">GPA 3.8</p>
+          </div>
+          <div class="entry">
+            <div class="entry-head">
+              <h3>B.E., Aerospace Engineering</h3>
+              <span class="date">Aug 2018–Jul 2022</span>
+            </div>
+            <p>SASTRA University, Thanjavur.</p>
+            <p class="date">GPA 7.8/10</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="papers">
+      <h2>Publications</h2>
+      <ul class="papers">
+        <li>
+          <p class="paper-title">Building a Digital Twin Framework for Propulsion Engines with Particle Damage.</p>
+          <p class="paper-meta">M. Shanmugam et al. AIAA AVIATION Forum, 2026.</p>
+        </li>
+        <li>
+          <p class="paper-title">Three-Dimensional Effects of the Flow Over the BeVERLI Hill.</p>
+          <p class="paper-meta">M. Shanmugam et al. AIAA SciTech Forum, 2026.</p>
+        </li>
+        <li>
+          <p class="paper-title">Experimental Results for the VT–NASA CFD Turbulence Model Blind Validation Challenge.</p>
+          <p class="paper-meta">T. Lowe, C. J. Roy, et al., incl. M. Shanmugam. AIAA AVIATION / ASCEND, 2024.</p>
+        </li>
+        <li>
+          <p class="paper-title">Summary of Data from the VT–NASA Blind Validation CFD Challenge Case.</p>
+          <p class="paper-meta">C. J. Roy, T. Lowe, et al. AIAA AVIATION / ASCEND, 2024.</p>
+        </li>
+        <li>
+          <p class="paper-title">Turbulent Boundary Layer Flow Over a Bump.</p>
+          <p class="paper-meta">M. Shanmugam. Master's thesis, Virginia Tech, 2024.</p>
+        </li>
+        <li>
+          <p class="paper-title">Mission Planning and Analysis of Heliopause and the World Beyond Solar System.</p>
+          <p class="paper-meta">T. Roy, M. Malik, M. Shanmugam, and G. Velidi. AIAA SciTech Forum, 2023.</p>
+        </li>
+        <li>
+          <p class="paper-title">Vane Induced Two-Phase Flow Mixing.</p>
+          <p class="paper-meta">K. Sowndarya, M. Shanmugam, et al. IOP Conference Series: Earth and Environmental Science, 2021.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="leadership">
+      <h2>Leadership</h2>
+      <ul class="papers">
+        <li>
+          <div class="entry-head">
+            <h3>Aviation Week 20 Twenties</h3>
+            <span class="date">2025</span>
+          </div>
+        </li>
+        <li>
+          <div class="entry-head">
+            <h3>Head of Media, Women of Aeronautics and Astronautics India</h3>
+            <span class="date">Jul 2021–present</span>
+          </div>
+        </li>
+        <li>
+          <div class="entry-head">
+            <h3>Vice President, Aero Modeling Club, SASTRA</h3>
+          </div>
+          <p class="paper-meta">RC aircraft, hovercraft, and water rockets, including the Boeing–IIT aeromodelling competition.</p>
+        </li>
+      </ul>
     </section>
 
     <footer>© 2026 Monica Shanmugam</footer>
   </main>
+
+  <script>
+    (function () {
+      "use strict";
+      const chips = document.querySelectorAll(".chip");
+      const rows = document.querySelectorAll(".research");
+
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          const filter = chip.dataset.filter;
+          chips.forEach(function (c) {
+            const on = c === chip;
+            c.classList.toggle("active", on);
+            c.setAttribute("aria-pressed", String(on));
+          });
+          rows.forEach(function (row) {
+            const tags = row.dataset.tags.split(" ");
+            row.hidden = filter !== "all" && !tags.includes(filter);
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
